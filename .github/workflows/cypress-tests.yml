@@ -2,10 +2,6 @@ name: Cypress Tests
 
 on:
   workflow_dispatch:
-    inputs:
-      spec:
-        description: Run by cypress comando line
-        default: cypress/e2e/*
   
 jobs:
   cypress-electron-tests:
