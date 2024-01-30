@@ -5,7 +5,7 @@ on:
     inputs:
       spec:
         description: Run by cypress comando line
-        default: cypress/e22/*
+        default: cypress/e2e/*
 
 jobs:
   cypress-e2e-electron:
