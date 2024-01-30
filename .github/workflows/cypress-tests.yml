@@ -4,12 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       cli:
-        description: Run by cypress comando line
-        default: npx cypress run
+        description: Run by cypress node comand
+        default: node runner.js
 
 jobs:
   cypress-electron-tests:
     runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node-20.10.0-chrome-121.0.6167.85-1-ff-118.0.2-edge-118.0.2088.46-1
+      options: --user 1001
     steps:
       - name: Get code
         uses: actions/checkout@v4.1.1
